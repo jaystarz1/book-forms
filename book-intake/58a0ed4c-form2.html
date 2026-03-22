@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Your Story — Sheena</title>
+<style>
+:root {
+  --brand-dark: #1a1a2e; --brand-accent: #7c5cbf; --brand-gold: #c9a959;
+  --text-primary: #e0e0e0; --text-secondary: #999;
+  --bg-page: #121218; --bg-card: #1e1e2a; --bg-selected: #2a2a3e;
+  --border-card: #333; --green: #4caf50; --red: #ef5350;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg-page); color: var(--text-primary); line-height: 1.6; }
+.container { max-width: 720px; margin: 0 auto; padding: 24px 16px; }
+.page-header { text-align: center; margin-bottom: 32px; padding-bottom: 20px; border-bottom: 2px solid var(--brand-accent); }
+.brand { font-size: 13px; letter-spacing: 3px; color: var(--brand-gold); font-weight: 700; margin-bottom: 8px; text-transform: uppercase; }
+.page-header h1 { font-size: 24px; margin-bottom: 4px; }
+.meta-line { font-size: 14px; color: var(--text-secondary); }
+.section-card { background: var(--bg-card); border-radius: 8px; padding: 24px; margin-bottom: 20px; border: 1px solid var(--border-card); }
+.section-card h2 { font-size: 18px; color: var(--brand-gold); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border-card); }
+.form-group { margin-bottom: 20px; }
+.form-group > label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+.form-group .hint { font-size: 13px; color: var(--text-secondary); margin-bottom: 6px; font-style: italic; }
+.form-group .quote { border-left: 3px solid var(--brand-accent); padding: 8px 16px; margin: 8px 0; color: var(--text-secondary); font-style: italic; font-size: 13px; }
+.form-group .pick-note { font-size: 12px; color: var(--brand-accent); margin-bottom: 6px; }
+.option-group { display: flex; flex-direction: column; gap: 8px; }
+.option-group label { display: flex; align-items: flex-start; gap: 10px; font-weight: 400; cursor: pointer; padding: 10px 12px; border-radius: 6px; border: 1px solid transparent; transition: background 0.15s, border-color 0.15s; }
+.option-group label:hover { background: var(--bg-selected); border-color: var(--border-card); }
+.option-group input[type="radio"], .option-group input[type="checkbox"] { width: 18px; height: 18px; margin-top: 2px; accent-color: var(--brand-accent); flex-shrink: 0; }
+.other-text { width: 100%; padding: 10px 12px; background: #16161f; border: 1px solid var(--border-card); border-radius: 6px; color: var(--text-primary); font-size: 15px; font-family: inherit; margin-top: 8px; display: none; resize: vertical; }
+.other-text:focus { border-color: var(--brand-accent); outline: none; box-shadow: 0 0 0 3px rgba(124,92,191,0.2); }
+/* Binary pairs */
+.pair-row { display: flex; gap: 8px; margin-bottom: 8px; }
+.pair-row label { flex: 1; text-align: center; padding: 12px 8px; border: 1px solid var(--border-card); border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 400; transition: background 0.15s, border-color 0.15s; display: flex; align-items: center; justify-content: center; gap: 6px; }
+.pair-row label:hover { background: var(--bg-selected); }
+.pair-row input[type="radio"] { width: 16px; height: 16px; accent-color: var(--brand-accent); }
+@media (max-width: 480px) { .pair-row { flex-direction: column; } .pair-row label { text-align: left; justify-content: flex-start; } }
+.submit-section { text-align: center; padding: 24px; background: var(--bg-card); border-radius: 8px; border: 1px solid var(--border-card); margin-top: 24px; }
+.submit-btn { background: var(--brand-accent); color: white; border: none; padding: 14px 36px; font-size: 16px; font-weight: 700; border-radius: 8px; cursor: pointer; }
+.submit-btn:hover:not(:disabled) { background: #6a4daa; }
+.submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.submit-help { font-size: 13px; color: var(--text-secondary); margin-top: 10px; }
+.success-message { background: #1a2a1a; color: var(--green); padding: 24px; border-radius: 8px; text-align: center; margin-top: 24px; display: none; }
+.success-message h2 { margin-bottom: 8px; border: none; padding: 0; color: var(--green); }
+.page-footer { text-align: center; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border-card); font-size: 13px; color: var(--text-secondary); }
+@media (max-width: 480px) { .container { padding: 12px 8px; } .submit-btn { width: 100%; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="page-header">
+    <div class="brand">BOOK PRODUCTION SERVICE</div>
+    <h1>Shaping Your Story</h1>
+    <div class="meta-line">Generated: March 22, 2026</div>
+  </header>
+
+  <form id="page-form">
+    <input type="hidden" name="token" value="58a0ed4c-3cc2-4f90-9860-1da89805b9a7">
+    <input type="hidden" name="form_type" value="beta_vision">
+    <input type="hidden" name="client_name" value="Sheena Cullen">
+  <div class="section-card">
+    <h2>Welcome Back, Sheena</h2>
+    <p>We read everything you shared. Here's what you told us:</p>
+    <div class="quote">Elves fairies supernatural beings fantasy characters</div>
+    <p>We've turned your answers into suggestions. For each question, just pick
+    the option that feels right — or choose <strong>Other</strong> if none of
+    them fit.</p>
+    <p>This should take about <strong>5 minutes</strong>. No essays required.</p>
+  </div>    <div class="section-card">      <h2>Your World</h2><div class="form-group">
+  <label>1. What kind of kingdom or society? <span style="color: var(--red);">*</span></label>
+  <div class="hint">You said</div>
+  <div class="quote">In a fictional kingdom</div>
+  <div class="option-group">
+    <label><input type="radio" name="kingdom_type" value="Medieval monarchy with a royal court" required> Medieval monarchy with a royal court</label>
+    <label><input type="radio" name="kingdom_type" value="Ancient council of elder races" required> Ancient council of elder races</label>
+    <label><input type="radio" name="kingdom_type" value="Tribal clans spread across wildlands" required> Tribal clans spread across wildlands</label>
+    <label><input type="radio" name="kingdom_type" value="A hidden realm most humans don&#x27;t know exists" required> A hidden realm most humans don&#x27;t know exists</label>
+    <label><input type="radio" name="kingdom_type" value="Multiple rival kingdoms" required> Multiple rival kingdoms</label>
+    <label><input type="radio" name="kingdom_type" value="__other__" data-other="other_kingdom_type" required> Other</label>
+    <textarea class="other-text" id="other_kingdom_type" name="kingdom_type_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>2. How do the different races get along? <span style="color: var(--red);">*</span></label>
+  <div class="option-group">
+    <label><input type="radio" name="races_coexist" value="They live together peacefully" required> They live together peacefully</label>
+    <label><input type="radio" name="races_coexist" value="Uneasy coexistence — tensions under the surface" required> Uneasy coexistence — tensions under the surface</label>
+    <label><input type="radio" name="races_coexist" value="Open conflict or war between races" required> Open conflict or war between races</label>
+    <label><input type="radio" name="races_coexist" value="Segregated — each race has its own territory" required> Segregated — each race has its own territory</label>
+    <label><input type="radio" name="races_coexist" value="Some races are hidden or thought to be extinct" required> Some races are hidden or thought to be extinct</label>
+    <label><input type="radio" name="races_coexist" value="__other__" data-other="other_races_coexist" required> Other</label>
+    <textarea class="other-text" id="other_races_coexist" name="races_coexist_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>3. How does magic work in this world? <span style="color: var(--red);">*</span></label>
+  <div class="option-group">
+    <label><input type="radio" name="magic_system" value="Each race has its own innate abilities" required> Each race has its own innate abilities</label>
+    <label><input type="radio" name="magic_system" value="Magic is learned through study or mentorship" required> Magic is learned through study or mentorship</label>
+    <label><input type="radio" name="magic_system" value="Both — innate talent plus training" required> Both — innate talent plus training</label>
+    <label><input type="radio" name="magic_system" value="Magic is rare and feared" required> Magic is rare and feared</label>
+    <label><input type="radio" name="magic_system" value="Magic is woven into nature itself" required> Magic is woven into nature itself</label>
+    <label><input type="radio" name="magic_system" value="__other__" data-other="other_magic_system" required> Other</label>
+    <textarea class="other-text" id="other_magic_system" name="magic_system_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div>    </div>    <div class="section-card">      <h2>Your Protagonist</h2><div class="form-group">
+  <label>4. Who raised your protagonist? <span style="color: var(--red);">*</span></label>
+  <div class="hint">You said she&#x27;s</div>
+  <div class="quote">Elf/human halfling female&quot; and the key scene is &quot;Elf discovers parentage</div>
+  <div class="option-group">
+    <label><input type="radio" name="raised_by" value="Raised by humans — doesn&#x27;t know she&#x27;s half-elf" required> Raised by humans — doesn&#x27;t know she&#x27;s half-elf</label>
+    <label><input type="radio" name="raised_by" value="Raised by elves — always felt different, never knew why" required> Raised by elves — always felt different, never knew why</label>
+    <label><input type="radio" name="raised_by" value="Raised by a single parent who kept secrets" required> Raised by a single parent who kept secrets</label>
+    <label><input type="radio" name="raised_by" value="Orphan or foster situation — no family at all" required> Orphan or foster situation — no family at all</label>
+    <label><input type="radio" name="raised_by" value="Raised in isolation — hidden away for her protection" required> Raised in isolation — hidden away for her protection</label>
+    <label><input type="radio" name="raised_by" value="__other__" data-other="other_raised_by" required> Other</label>
+    <textarea class="other-text" id="other_raised_by" name="raised_by_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>5. How old is she when the story starts? <span style="color: var(--red);">*</span></label>
+  <div class="option-group">
+    <label><input type="radio" name="protagonist_age" value="Teen (16-17)" required> Teen (16-17)</label>
+    <label><input type="radio" name="protagonist_age" value="Young adult (18-22)" required> Young adult (18-22)</label>
+    <label><input type="radio" name="protagonist_age" value="Adult (25-30)" required> Adult (25-30)</label>
+    <label><input type="radio" name="protagonist_age" value="Older (30+)" required> Older (30+)</label>
+    <label><input type="radio" name="protagonist_age" value="__other__" data-other="other_protagonist_age" required> Other</label>
+    <textarea class="other-text" id="other_protagonist_age" name="protagonist_age_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>6. What&#x27;s her life like BEFORE the story kicks off? <span style="color: var(--red);">*</span></label>
+  <div class="hint">You said her arc is</div>
+  <div class="quote">Go from no confidence and friendless to confident and many new friends</div>
+  <div class="option-group">
+    <label><input type="radio" name="starting_situation" value="Servant or low-status outsider" required> Servant or low-status outsider</label>
+    <label><input type="radio" name="starting_situation" value="Ordinary village life — invisible and overlooked" required> Ordinary village life — invisible and overlooked</label>
+    <label><input type="radio" name="starting_situation" value="Outcast — bullied or excluded for being different" required> Outcast — bullied or excluded for being different</label>
+    <label><input type="radio" name="starting_situation" value="Living a lie — hiding who she really is" required> Living a lie — hiding who she really is</label>
+    <label><input type="radio" name="starting_situation" value="Comfortable but restless — knows something is missing" required> Comfortable but restless — knows something is missing</label>
+    <label><input type="radio" name="starting_situation" value="__other__" data-other="other_starting_situation" required> Other</label>
+    <textarea class="other-text" id="other_starting_situation" name="starting_situation_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>7. What does she discover about her parentage? <span style="color: var(--red);">*</span></label>
+  <div class="option-group">
+    <label><input type="radio" name="parentage_reveal" value="Her elf parent was royalty or someone important" required> Her elf parent was royalty or someone important</label>
+    <label><input type="radio" name="parentage_reveal" value="Her parent is still alive and looking for her" required> Her parent is still alive and looking for her</label>
+    <label><input type="radio" name="parentage_reveal" value="She was hidden at birth to protect her from danger" required> She was hidden at birth to protect her from danger</label>
+    <label><input type="radio" name="parentage_reveal" value="Her mixed blood gives her unique powers nobody expected" required> Her mixed blood gives her unique powers nobody expected</label>
+    <label><input type="radio" name="parentage_reveal" value="Her existence is forbidden — she shouldn&#x27;t exist at all" required> Her existence is forbidden — she shouldn&#x27;t exist at all</label>
+    <label><input type="radio" name="parentage_reveal" value="__other__" data-other="other_parentage_reveal" required> Other</label>
+    <textarea class="other-text" id="other_parentage_reveal" name="parentage_reveal_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div>    </div>    <div class="section-card">      <h2>Your Plot</h2><div class="form-group">
+  <label>8. What sets the story in motion? <span style="color: var(--red);">*</span></label>
+  <div class="option-group">
+    <label><input type="radio" name="story_kickoff" value="She&#x27;s forced to leave home (danger, exile, or disaster)" required> She&#x27;s forced to leave home (danger, exile, or disaster)</label>
+    <label><input type="radio" name="story_kickoff" value="She discovers something that changes everything" required> She discovers something that changes everything</label>
+    <label><input type="radio" name="story_kickoff" value="A stranger arrives with news about her past" required> A stranger arrives with news about her past</label>
+    <label><input type="radio" name="story_kickoff" value="She runs away looking for answers" required> She runs away looking for answers</label>
+    <label><input type="radio" name="story_kickoff" value="An event reveals her hidden nature publicly" required> An event reveals her hidden nature publicly</label>
+    <label><input type="radio" name="story_kickoff" value="__other__" data-other="other_story_kickoff" required> Other</label>
+    <textarea class="other-text" id="other_story_kickoff" name="story_kickoff_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>9. What is she trying to do? Pick up to 2.</label>
+  <div class="pick-note">Pick up to 2</div>
+  <div class="hint">You said the stakes are</div>
+  <div class="quote">Elf&#x27;s self worth, happiness and that of their friends</div>
+  <div class="option-group">
+    <label><input type="checkbox" name="quest_type" value="Find her real parent or family"> Find her real parent or family</label>
+    <label><input type="checkbox" name="quest_type" value="Prove herself worthy to a community that rejected her"> Prove herself worthy to a community that rejected her</label>
+    <label><input type="checkbox" name="quest_type" value="Save her friends or kingdom from a growing threat"> Save her friends or kingdom from a growing threat</label>
+    <label><input type="checkbox" name="quest_type" value="Discover and master her hidden abilities"> Discover and master her hidden abilities</label>
+    <label><input type="checkbox" name="quest_type" value="Find where she belongs — her true home"> Find where she belongs — her true home</label>
+    <label><input type="checkbox" name="quest_type" value="__other__" data-other="other_quest_type"> Other</label>
+    <textarea class="other-text" id="other_quest_type" name="quest_type_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>10. Does she build a group of companions along the way? <span style="color: var(--red);">*</span></label>
+  <div class="hint">You mentioned Hobbit and LOTR — the fellowship/party dynamic.</div>
+  <div class="option-group">
+    <label><input type="radio" name="found_family" value="Yes — a ragtag group that becomes her found family" required> Yes — a ragtag group that becomes her found family</label>
+    <label><input type="radio" name="found_family" value="She has one key companion, not a group" required> She has one key companion, not a group</label>
+    <label><input type="radio" name="found_family" value="She starts alone and slowly gains allies" required> She starts alone and slowly gains allies</label>
+    <label><input type="radio" name="found_family" value="She&#x27;s assigned companions she didn&#x27;t choose" required> She&#x27;s assigned companions she didn&#x27;t choose</label>
+    <label><input type="radio" name="found_family" value="__other__" data-other="other_found_family" required> Other</label>
+    <textarea class="other-text" id="other_found_family" name="found_family_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>11. Is there a prophecy or &#x27;chosen one&#x27; element? <span style="color: var(--red);">*</span></label>
+  <div class="option-group">
+    <label><input type="radio" name="chosen_one" value="Yes — she&#x27;s destined for something specific" required> Yes — she&#x27;s destined for something specific</label>
+    <label><input type="radio" name="chosen_one" value="There are hints but nothing confirmed" required> There are hints but nothing confirmed</label>
+    <label><input type="radio" name="chosen_one" value="No — she&#x27;s ordinary and earns everything herself" required> No — she&#x27;s ordinary and earns everything herself</label>
+    <label><input type="radio" name="chosen_one" value="The prophecy exists but might be about someone else" required> The prophecy exists but might be about someone else</label>
+    <label><input type="radio" name="chosen_one" value="__other__" data-other="other_chosen_one" required> Other</label>
+    <textarea class="other-text" id="other_chosen_one" name="chosen_one_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div>    </div>    <div class="section-card">      <h2>This or That</h2><div class="form-group">
+  <label>12. Quick picks — choose one from each pair</label>
+  <div class="hint">These help us nail the feel of your book. Go with your gut.</div>
+  <div class="pair-row">
+    <label><input type="radio" name="pair_0" value="Plot-driven (things happen fast)" required> Plot-driven (things happen fast)</label>
+    <label><input type="radio" name="pair_0" value="Character-driven (deep inner world)" required> Character-driven (deep inner world)</label>
+  </div>
+  <div class="pair-row">
+    <label><input type="radio" name="pair_1" value="Fast pace" required> Fast pace</label>
+    <label><input type="radio" name="pair_1" value="Slow burn" required> Slow burn</label>
+  </div>
+  <div class="pair-row">
+    <label><input type="radio" name="pair_2" value="Happy ending" required> Happy ending</label>
+    <label><input type="radio" name="pair_2" value="Bittersweet ending" required> Bittersweet ending</label>
+  </div>
+  <div class="pair-row">
+    <label><input type="radio" name="pair_3" value="Surprise the reader" required> Surprise the reader</label>
+    <label><input type="radio" name="pair_3" value="Satisfy expectations" required> Satisfy expectations</label>
+  </div>
+  <div class="pair-row">
+    <label><input type="radio" name="pair_4" value="Dialogue-heavy" required> Dialogue-heavy</label>
+    <label><input type="radio" name="pair_4" value="Rich description / inner monologue" required> Rich description / inner monologue</label>
+  </div>
+  <div class="pair-row">
+    <label><input type="radio" name="pair_5" value="Gritty and raw" required> Gritty and raw</label>
+    <label><input type="radio" name="pair_5" value="Polished and elegant" required> Polished and elegant</label>
+  </div>
+  <div class="pair-row">
+    <label><input type="radio" name="pair_6" value="One protagonist&#x27;s POV" required> One protagonist&#x27;s POV</label>
+    <label><input type="radio" name="pair_6" value="Multiple viewpoints" required> Multiple viewpoints</label>
+  </div>
+  <div class="pair-row">
+    <label><input type="radio" name="pair_7" value="Serious tone" required> Serious tone</label>
+    <label><input type="radio" name="pair_7" value="Playful tone" required> Playful tone</label>
+  </div>
+</div>    </div>    <div class="section-card">      <h2>Tone &amp; Feel</h2><div class="form-group">
+  <label>13. Where should the book sit? <span style="color: var(--red);">*</span></label>
+  <div class="hint">You picked: Mysterious and atmospheric, Humorous / light-hearted.</div>
+  <div class="option-group">
+    <label><input type="radio" name="tone_balance" value="Mostly cozy and fun with some mysterious moments" required> Mostly cozy and fun with some mysterious moments</label>
+    <label><input type="radio" name="tone_balance" value="Equal mix — light humor AND genuine mystery/danger" required> Equal mix — light humor AND genuine mystery/danger</label>
+    <label><input type="radio" name="tone_balance" value="Mostly atmospheric and mysterious with comic relief" required> Mostly atmospheric and mysterious with comic relief</label>
+    <label><input type="radio" name="tone_balance" value="Starts light, gets progressively darker" required> Starts light, gets progressively darker</label>
+    <label><input type="radio" name="tone_balance" value="__other__" data-other="other_tone_balance" required> Other</label>
+    <textarea class="other-text" id="other_tone_balance" name="tone_balance_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>14. What kind of humor? <span style="color: var(--red);">*</span></label>
+  <div class="option-group">
+    <label><input type="radio" name="humor_style" value="Witty banter between characters" required> Witty banter between characters</label>
+    <label><input type="radio" name="humor_style" value="Fish-out-of-water situations" required> Fish-out-of-water situations</label>
+    <label><input type="radio" name="humor_style" value="A funny sidekick or comic relief character" required> A funny sidekick or comic relief character</label>
+    <label><input type="radio" name="humor_style" value="Dry, subtle humor in the narration" required> Dry, subtle humor in the narration</label>
+    <label><input type="radio" name="humor_style" value="Sarcastic protagonist voice" required> Sarcastic protagonist voice</label>
+    <label><input type="radio" name="humor_style" value="__other__" data-other="other_humor_style" required> Other</label>
+    <textarea class="other-text" id="other_humor_style" name="humor_style_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>15. When the reader closes the book, what&#x27;s the ONE feeling that stays? <span style="color: var(--red);">*</span></label>
+  <div class="option-group">
+    <label><input type="radio" name="closing_feeling" value="Hope — things are going to be OK" required> Hope — things are going to be OK</label>
+    <label><input type="radio" name="closing_feeling" value="Wonder — that world felt real and I want to go back" required> Wonder — that world felt real and I want to go back</label>
+    <label><input type="radio" name="closing_feeling" value="Satisfaction — the journey was worth it" required> Satisfaction — the journey was worth it</label>
+    <label><input type="radio" name="closing_feeling" value="Warmth — I care about these characters like friends" required> Warmth — I care about these characters like friends</label>
+    <label><input type="radio" name="closing_feeling" value="Curiosity — I need to know what happens next" required> Curiosity — I need to know what happens next</label>
+    <label><input type="radio" name="closing_feeling" value="Triumph — she did it against all odds" required> Triumph — she did it against all odds</label>
+    <label><input type="radio" name="closing_feeling" value="__other__" data-other="other_closing_feeling" required> Other</label>
+    <textarea class="other-text" id="other_closing_feeling" name="closing_feeling_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div>    </div>    <div class="section-card">      <h2>What Worries You</h2><div class="form-group">
+  <label>16. What worries you most about this story? <span style="color: var(--red);">*</span></label>
+  <div class="hint">This tells us where to put extra care.</div>
+  <div class="option-group">
+    <label><input type="radio" name="biggest_worry" value="That it&#x27;ll feel too much like Tolkien / a copy" required> That it&#x27;ll feel too much like Tolkien / a copy</label>
+    <label><input type="radio" name="biggest_worry" value="That the protagonist won&#x27;t feel unique enough" required> That the protagonist won&#x27;t feel unique enough</label>
+    <label><input type="radio" name="biggest_worry" value="That the world won&#x27;t feel real or detailed enough" required> That the world won&#x27;t feel real or detailed enough</label>
+    <label><input type="radio" name="biggest_worry" value="That the romance will overwhelm the adventure" required> That the romance will overwhelm the adventure</label>
+    <label><input type="radio" name="biggest_worry" value="That it&#x27;ll be too childish or too dark" required> That it&#x27;ll be too childish or too dark</label>
+    <label><input type="radio" name="biggest_worry" value="That my vision won&#x27;t come through" required> That my vision won&#x27;t come through</label>
+    <label><input type="radio" name="biggest_worry" value="__other__" data-other="other_biggest_worry" required> Other</label>
+    <textarea class="other-text" id="other_biggest_worry" name="biggest_worry_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div>    </div>    <div class="section-card">      <h2>Romance</h2><div class="form-group">
+  <label>17. How big a role does romance play? <span style="color: var(--red);">*</span></label>
+  <div class="option-group">
+    <label><input type="radio" name="romance_presence" value="Central subplot — important but not the whole story" required> Central subplot — important but not the whole story</label>
+    <label><input type="radio" name="romance_presence" value="Very slow burn — builds across multiple books" required> Very slow burn — builds across multiple books</label>
+    <label><input type="radio" name="romance_presence" value="Just hints in book one, develops later" required> Just hints in book one, develops later</label>
+    <label><input type="radio" name="romance_presence" value="Minor — a spark but nothing more yet" required> Minor — a spark but nothing more yet</label>
+    <label><input type="radio" name="romance_presence" value="__other__" data-other="other_romance_presence" required> Other</label>
+    <textarea class="other-text" id="other_romance_presence" name="romance_presence_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>18. Who is the love interest? <span style="color: var(--red);">*</span></label>
+  <div class="option-group">
+    <label><input type="radio" name="love_interest_type" value="Another elf" required> Another elf</label>
+    <label><input type="radio" name="love_interest_type" value="A human" required> A human</label>
+    <label><input type="radio" name="love_interest_type" value="A different race entirely" required> A different race entirely</label>
+    <label><input type="radio" name="love_interest_type" value="Not decided yet — surprise me" required> Not decided yet — surprise me</label>
+    <label><input type="radio" name="love_interest_type" value="No love interest in book one" required> No love interest in book one</label>
+    <label><input type="radio" name="love_interest_type" value="__other__" data-other="other_love_interest_type" required> Other</label>
+    <textarea class="other-text" id="other_love_interest_type" name="love_interest_type_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>19. What&#x27;s the romantic dynamic? <span style="color: var(--red);">*</span></label>
+  <div class="option-group">
+    <label><input type="radio" name="romance_dynamic" value="Enemies to friends to lovers" required> Enemies to friends to lovers</label>
+    <label><input type="radio" name="romance_dynamic" value="Shy, awkward mutual crush" required> Shy, awkward mutual crush</label>
+    <label><input type="radio" name="romance_dynamic" value="Forbidden — their races/families don&#x27;t mix" required> Forbidden — their races/families don&#x27;t mix</label>
+    <label><input type="radio" name="romance_dynamic" value="Protector/guardian who develops feelings" required> Protector/guardian who develops feelings</label>
+    <label><input type="radio" name="romance_dynamic" value="Rivals who respect each other" required> Rivals who respect each other</label>
+    <label><input type="radio" name="romance_dynamic" value="__other__" data-other="other_romance_dynamic" required> Other</label>
+    <textarea class="other-text" id="other_romance_dynamic" name="romance_dynamic_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div>    </div>    <div class="section-card">      <h2>Guardrails</h2><div class="form-group">
+  <label>20. How much violence is OK? <span style="color: var(--red);">*</span></label>
+  <div class="hint">You said</div>
+  <div class="quote">No overly sexual things</div>
+  <div class="option-group">
+    <label><input type="radio" name="violence_level" value="Cartoon/implied — no real consequences shown" required> Cartoon/implied — no real consequences shown</label>
+    <label><input type="radio" name="violence_level" value="Real danger but not graphic" required> Real danger but not graphic</label>
+    <label><input type="radio" name="violence_level" value="Battle scenes OK with some intensity" required> Battle scenes OK with some intensity</label>
+    <label><input type="radio" name="violence_level" value="Keep it very light" required> Keep it very light</label>
+    <label><input type="radio" name="violence_level" value="__other__" data-other="other_violence_level" required> Other</label>
+    <textarea class="other-text" id="other_violence_level" name="violence_level_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>21. How dark can the story get? <span style="color: var(--red);">*</span></label>
+  <div class="option-group">
+    <label><input type="radio" name="darkest_moment" value="Scary moments but always hopeful — the light wins" required> Scary moments but always hopeful — the light wins</label>
+    <label><input type="radio" name="darkest_moment" value="Real danger and emotional pain, but ultimately uplifting" required> Real danger and emotional pain, but ultimately uplifting</label>
+    <label><input type="radio" name="darkest_moment" value="Keep it light throughout" required> Keep it light throughout</label>
+    <label><input type="radio" name="darkest_moment" value="She can struggle and fail, as long as she grows from it" required> She can struggle and fail, as long as she grows from it</label>
+    <label><input type="radio" name="darkest_moment" value="__other__" data-other="other_darkest_moment" required> Other</label>
+    <textarea class="other-text" id="other_darkest_moment" name="darkest_moment_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>22. Can characters die? <span style="color: var(--red);">*</span></label>
+  <div class="option-group">
+    <label><input type="radio" name="death_policy" value="Only villains" required> Only villains</label>
+    <label><input type="radio" name="death_policy" value="Supporting characters can die if it serves the story" required> Supporting characters can die if it serves the story</label>
+    <label><input type="radio" name="death_policy" value="Main characters are safe" required> Main characters are safe</label>
+    <label><input type="radio" name="death_policy" value="Anyone can die — make it feel real" required> Anyone can die — make it feel real</label>
+    <label><input type="radio" name="death_policy" value="__other__" data-other="other_death_policy" required> Other</label>
+    <textarea class="other-text" id="other_death_policy" name="death_policy_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>23. What should this book definitely NOT be? Check all that apply.</label>
+  <div class="option-group">
+    <label><input type="checkbox" name="book_is_not" value="Not grimdark or hopeless"> Not grimdark or hopeless</label>
+    <label><input type="checkbox" name="book_is_not" value="Not a love story first — the adventure matters more"> Not a love story first — the adventure matters more</label>
+    <label><input type="checkbox" name="book_is_not" value="Not childish — she&#x27;s an adult, not a kid"> Not childish — she&#x27;s an adult, not a kid</label>
+    <label><input type="checkbox" name="book_is_not" value="Not preachy or moralistic"> Not preachy or moralistic</label>
+    <label><input type="checkbox" name="book_is_not" value="Not ultra-violent or gory"> Not ultra-violent or gory</label>
+    <label><input type="checkbox" name="book_is_not" value="Not a carbon copy of Tolkien"> Not a carbon copy of Tolkien</label>
+    <label><input type="checkbox" name="book_is_not" value="Not slow — things need to happen"> Not slow — things need to happen</label>
+    <label><input type="checkbox" name="book_is_not" value="__other__" data-other="other_book_is_not"> Other</label>
+    <textarea class="other-text" id="other_book_is_not" name="book_is_not_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div>    </div>    <div class="section-card">      <h2>Comps</h2><div class="form-group">
+  <label>24. What books/shows is the PLOT most like? Pick up to 2.</label>
+  <div class="pick-note">Pick up to 2</div>
+  <div class="hint">You said</div>
+  <div class="quote">Hobbit, Shannara, and Lord of the Rings</div>
+  <div class="option-group">
+    <label><input type="checkbox" name="story_comps" value="The Hobbit — cozy quest with a reluctant hero"> The Hobbit — cozy quest with a reluctant hero</label>
+    <label><input type="checkbox" name="story_comps" value="Shannara — epic fantasy with ancient evil"> Shannara — epic fantasy with ancient evil</label>
+    <label><input type="checkbox" name="story_comps" value="LOTR — fellowship on a mission to save the world"> LOTR — fellowship on a mission to save the world</label>
+    <label><input type="checkbox" name="story_comps" value="The Witcher — monster hunting with moral grey areas"> The Witcher — monster hunting with moral grey areas</label>
+    <label><input type="checkbox" name="story_comps" value="Eragon — young hero discovers powers and destiny"> Eragon — young hero discovers powers and destiny</label>
+    <label><input type="checkbox" name="story_comps" value="Narnia — portal to a magical kingdom"> Narnia — portal to a magical kingdom</label>
+    <label><input type="checkbox" name="story_comps" value="Avatar: The Last Airbender — young hero, found family, elemental powers"> Avatar: The Last Airbender — young hero, found family, elemental powers</label>
+    <label><input type="checkbox" name="story_comps" value="__other__" data-other="other_story_comps"> Other</label>
+    <textarea class="other-text" id="other_story_comps" name="story_comps_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>25. Whose WRITING STYLE do you enjoy? Pick up to 2.</label>
+  <div class="pick-note">Pick up to 2</div>
+  <div class="hint">This is about how the words feel on the page, not what happens in the story.</div>
+  <div class="option-group">
+    <label><input type="checkbox" name="style_comps" value="Tolkien — rich, descriptive, world-heavy"> Tolkien — rich, descriptive, world-heavy</label>
+    <label><input type="checkbox" name="style_comps" value="Terry Pratchett — funny, clever, sneakily deep"> Terry Pratchett — funny, clever, sneakily deep</label>
+    <label><input type="checkbox" name="style_comps" value="Sarah J. Maas — emotional, romantic, page-turning"> Sarah J. Maas — emotional, romantic, page-turning</label>
+    <label><input type="checkbox" name="style_comps" value="Brandon Sanderson — clear, systematic, satisfying"> Brandon Sanderson — clear, systematic, satisfying</label>
+    <label><input type="checkbox" name="style_comps" value="Neil Gaiman — dreamlike, atmospheric, poetic"> Neil Gaiman — dreamlike, atmospheric, poetic</label>
+    <label><input type="checkbox" name="style_comps" value="Rick Riordan — fun, fast, witty, accessible"> Rick Riordan — fun, fast, witty, accessible</label>
+    <label><input type="checkbox" name="style_comps" value="Robin Hobb — deeply character-driven, emotional gut-punches"> Robin Hobb — deeply character-driven, emotional gut-punches</label>
+    <label><input type="checkbox" name="style_comps" value="__other__" data-other="other_style_comps"> Other</label>
+    <textarea class="other-text" id="other_style_comps" name="style_comps_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div>    </div>    <div class="section-card">      <h2>Structure</h2><div class="form-group">
+  <label>26. How long should the book be? <span style="color: var(--red);">*</span></label>
+  <div class="option-group">
+    <label><input type="radio" name="book_length" value="Novella (20,000-40,000 words)" required> Novella (20,000-40,000 words)</label>
+    <label><input type="radio" name="book_length" value="Short novel (40,000-60,000 words)" required> Short novel (40,000-60,000 words)</label>
+    <label><input type="radio" name="book_length" value="Standard novel (60,000-80,000 words)" required> Standard novel (60,000-80,000 words)</label>
+    <label><input type="radio" name="book_length" value="Long novel (80,000-100,000 words)" required> Long novel (80,000-100,000 words)</label>
+    <label><input type="radio" name="book_length" value="You decide" required> You decide</label>
+    <label><input type="radio" name="book_length" value="__other__" data-other="other_book_length" required> Other</label>
+    <textarea class="other-text" id="other_book_length" name="book_length_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>27. Standalone or leave room for more? <span style="color: var(--red);">*</span></label>
+  <div class="option-group">
+    <label><input type="radio" name="standalone_or_open" value="Standalone — a complete story in one book" required> Standalone — a complete story in one book</label>
+    <label><input type="radio" name="standalone_or_open" value="Leave room for a series — wrap up the main story but leave the door open" required> Leave room for a series — wrap up the main story but leave the door open</label>
+    <label><input type="radio" name="standalone_or_open" value="__other__" data-other="other_standalone_or_open" required> Other</label>
+    <textarea class="other-text" id="other_standalone_or_open" name="standalone_or_open_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div>    </div>    <div class="section-card">
+      <h2>Anything Else</h2>
+      <div class="form-group">
+        <label>28. Anything we missed?</label>
+        <div class="hint">Totally optional. If something's burning in your mind, put it here.</div>
+        <textarea name="anything_else" rows="4" style="width:100%;padding:12px 14px;border:1px solid var(--border-card);border-radius:6px;font-size:15px;font-family:inherit;color:var(--text-primary);background:#16161f;resize:vertical;min-height:100px;"></textarea>
+      </div>
+    </div>    <div class="submit-section">
+      <button type="submit" class="submit-btn" id="submit-btn">Submit</button>
+      <p class="submit-help">Once we have this, we start building your book.</p>
+    </div>
+  </form>
+
+  <div id="success-message" class="success-message">
+    <h2>Submitted Successfully</h2>
+    <p>We have everything we need. We'll get to work and keep you posted!</p>
+  </div>
+  <footer class="page-footer">
+    <div style="font-weight: 600; margin-bottom: 4px;">Book Production Service</div>
+    <div>Questions? Email hello@crimsonpulpfic.com</div>
+  </footer>
+</div>
+
+<script>
+document.getElementById("page-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  var btn = document.getElementById("submit-btn");
+  var successMsg = document.getElementById("success-message");
+  btn.disabled = true;
+  btn.textContent = "Submitting...";
+  var formData = new FormData(this);
+  var data = {};
+  formData.forEach(function(value, key) {
+    if (data[key]) {
+      if (!Array.isArray(data[key])) data[key] = [data[key]];
+      data[key].push(value);
+    } else {
+      data[key] = value;
+    }
+  });
+  fetch("https://script.google.com/macros/s/AKfycbz9GI9JB3BHRV99c-JJ9spAcEUgMSKm8gj4UYC3jJm71K2K6tuXPUyTPXdX6PxOt0FHYg/exec", {
+    method: "POST",
+    headers: { "Content-Type": "text/plain" },
+    body: JSON.stringify({ action: "formSubmission", formType: "beta_vision", token: "58a0ed4c-3cc2-4f90-9860-1da89805b9a7", data: data }),
+    mode: "no-cors"
+  }).then(function() {
+    btn.textContent = "Submitted \u2713";
+    btn.style.background = "#4caf50";
+    if (successMsg) successMsg.style.display = "block";
+    document.getElementById("page-form").style.display = "none";
+  }).catch(function(err) {
+    btn.textContent = "Error \u2014 Try Again";
+    btn.style.background = "#ef5350";
+    btn.disabled = false;
+  });
+});
+// Toggle "Other" text areas
+document.querySelectorAll('input[data-other]').forEach(function(input) {
+  var textId = input.getAttribute('data-other');
+  var textarea = document.getElementById(textId);
+  var name = input.name;
+  document.querySelectorAll('input[name="' + name + '"]').forEach(function(r) {
+    r.addEventListener('change', function() {
+      textarea.style.display = input.checked ? 'block' : 'none';
+      if (input.checked) textarea.focus();
+    });
+  });
+});
+// Enforce pick limits
+document.querySelectorAll('.pick-note').forEach(function(note) {
+  var group = note.closest('.form-group');
+  if (!group) return;
+  var limit = parseInt(note.textContent.match(/\d+/)?.[0] || '0');
+  if (!limit) return;
+  var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+  checkboxes.forEach(function(cb) {
+    cb.addEventListener('change', function() {
+      var checked = group.querySelectorAll('input[type="checkbox"]:checked').length;
+      if (checked >= limit) {
+        checkboxes.forEach(function(c) { if (!c.checked) c.disabled = true; });
+      } else {
+        checkboxes.forEach(function(c) { c.disabled = false; });
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
