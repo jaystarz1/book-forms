@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Beta Reader Feedback — Married to my Devil</title>
+<style>
+:root {
+  --brand-dark: #1a1a2e; --brand-accent: #7c5cbf; --brand-gold: #c9a959;
+  --text-primary: #e0e0e0; --text-secondary: #999;
+  --bg-page: #121218; --bg-card: #1e1e2a; --bg-selected: #2a2a3e;
+  --border-card: #333; --green: #4caf50; --red: #ef5350;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg-page); color: var(--text-primary); line-height: 1.6; }
+.container { max-width: 720px; margin: 0 auto; padding: 24px 16px; }
+.page-header { text-align: center; margin-bottom: 32px; padding-bottom: 20px; border-bottom: 2px solid var(--brand-accent); }
+.brand { font-size: 13px; letter-spacing: 3px; color: var(--brand-gold); font-weight: 700; margin-bottom: 8px; text-transform: uppercase; }
+.page-header h1 { font-size: 24px; margin-bottom: 4px; }
+.page-header .subtitle { font-size: 16px; color: var(--brand-accent); font-style: italic; margin-bottom: 4px; }
+.meta-line { font-size: 14px; color: var(--text-secondary); }
+.section-card { background: var(--bg-card); border-radius: 8px; padding: 24px; margin-bottom: 20px; border: 1px solid var(--border-card); }
+.section-card h2 { font-size: 18px; color: var(--brand-gold); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border-card); }
+.section-card p { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+.form-group { margin-bottom: 24px; }
+.form-group > label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+.form-group .hint { font-size: 13px; color: var(--text-secondary); margin-bottom: 6px; font-style: italic; }
+/* Likert scale */
+.likert-row { display: flex; justify-content: space-between; align-items: center; gap: 4px; margin-top: 8px; }
+.likert-row label { display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: pointer; flex: 1; padding: 10px 4px; border-radius: 6px; border: 1px solid transparent; transition: background 0.15s, border-color 0.15s; text-align: center; }
+.likert-row label:hover { background: var(--bg-selected); border-color: var(--border-card); }
+.likert-row input[type="radio"] { width: 20px; height: 20px; accent-color: var(--brand-accent); }
+.likert-row .label-text { font-size: 11px; color: var(--text-secondary); line-height: 1.3; }
+.likert-row .label-number { font-size: 16px; font-weight: 700; color: var(--brand-accent); }
+.likert-anchors { display: flex; justify-content: space-between; margin-top: 4px; }
+.likert-anchors span { font-size: 11px; color: var(--text-secondary); }
+/* Star rating */
+.star-row { display: flex; gap: 8px; margin-top: 8px; }
+.star-row label { cursor: pointer; font-size: 32px; color: var(--border-card); transition: color 0.15s; }
+.star-row label:hover, .star-row label:hover ~ label { color: var(--brand-gold); }
+.star-row input[type="radio"] { display: none; }
+.star-row label.active { color: var(--brand-gold); }
+/* Textarea */
+textarea { width: 100%; padding: 12px 14px; background: #16161f; border: 1px solid var(--border-card); border-radius: 6px; color: var(--text-primary); font-size: 15px; font-family: inherit; resize: vertical; min-height: 80px; }
+textarea:focus { border-color: var(--brand-accent); outline: none; box-shadow: 0 0 0 3px rgba(124,92,191,0.2); }
+/* Comment toggle */
+.add-comment-btn { font-size: 12px; color: var(--brand-accent); cursor: pointer; margin-top: 6px; border: none; background: none; font-family: inherit; }
+.add-comment-btn:hover { text-decoration: underline; }
+.comment-area { display: none; margin-top: 8px; }
+.comment-area textarea { min-height: 60px; }
+/* Submit */
+.submit-section { text-align: center; padding: 24px; background: var(--bg-card); border-radius: 8px; border: 1px solid var(--border-card); margin-top: 24px; }
+.submit-btn { background: var(--brand-accent); color: white; border: none; padding: 14px 36px; font-size: 16px; font-weight: 700; border-radius: 8px; cursor: pointer; }
+.submit-btn:hover:not(:disabled) { background: #6a4daa; }
+.submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.submit-help { font-size: 13px; color: var(--text-secondary); margin-top: 10px; }
+.success-message { background: #1a2a1a; color: var(--green); padding: 24px; border-radius: 8px; text-align: center; margin-top: 24px; display: none; }
+.success-message h2 { margin-bottom: 8px; border: none; padding: 0; color: var(--green); }
+.page-footer { text-align: center; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border-card); font-size: 13px; color: var(--text-secondary); }
+@media (max-width: 480px) { .container { padding: 12px 8px; } .submit-btn { width: 100%; } .likert-row .label-text { font-size: 10px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="page-header">
+    <div class="brand">BETA READER FEEDBACK</div>
+    <h1>Married to my Devil</h1>
+    <div class="subtitle">Your honest reader experience</div>
+    <div class="meta-line">March 2026</div>
+  </header>
+
+  <form id="page-form">
+    <input type="hidden" name="token" value="e39f1b1f-ff5e-48da-9b85-ba371f37da7d">
+    <input type="hidden" name="form_type" value="beta_feedback">
+    <input type="hidden" name="client_name" value="Nina">
+    <input type="hidden" name="book_title" value="Married to my Devil">
+
+  <div class="section-card">
+    <h2>Welcome Back, Miss</h2>
+    <p>Thank you for reading <strong>Married to my Devil</strong>! We'd love to know what you thought.</p>
+    <p>For each statement, pick the number that best matches your experience. <strong>1 = Strongly Disagree</strong>, <strong>5 = Strongly Agree</strong>. Every question has a comment button if you want to add thoughts.</p>
+    <p>This takes about <strong>5 minutes</strong>. There are no wrong answers — your honest reaction is what matters most.</p>
+  </div>
+
+  <!-- SECTION: Opening & Hook -->
+  <div class="section-card">
+    <h2>Opening &amp; Hook</h2>
+    <div class="form-group">
+      <label>1. The opening chapter hooked me and made me want to keep reading.</label>
+      <div class="likert-row">
+        <label><input type="radio" name="q1_opening_hook" value="1" required><span class="label-number">1</span></label>
+        <label><input type="radio" name="q1_opening_hook" value="2"><span class="label-number">2</span></label>
+        <label><input type="radio" name="q1_opening_hook" value="3"><span class="label-number">3</span></label>
+        <label><input type="radio" name="q1_opening_hook" value="4"><span class="label-number">4</span></label>
+        <label><input type="radio" name="q1_opening_hook" value="5"><span class="label-number">5</span></label>
+      </div>
+      <div class="likert-anchors"><span>Strongly Disagree</span><span>Strongly Agree</span></div>
+      <button type="button" class="add-comment-btn" data-target="comment_q1">+ Add comment</button>
+      <div class="comment-area" id="comment_q1"><textarea name="q1_comment" placeholder="Optional — tell us more..."></textarea></div>
+    </div>
+  </div>
+
+  <!-- SECTION: Plot & Pacing -->
+  <div class="section-card">
+    <h2>Plot &amp; Pacing</h2>
+    <div class="form-group">
+      <label>2. The plot held my attention throughout the book.</label>
+      <div class="likert-row">
+        <label><input type="radio" name="q2_plot_attention" value="1" required><span class="label-number">1</span></label>
+        <label><input type="radio" name="q2_plot_attention" value="2"><span class="label-number">2</span></label>
+        <label><input type="radio" name="q2_plot_attention" value="3"><span class="label-number">3</span></label>
+        <label><input type="radio" name="q2_plot_attention" value="4"><span class="label-number">4</span></label>
+        <label><input type="radio" name="q2_plot_attention" value="5"><span class="label-number">5</span></label>
+      </div>
+      <div class="likert-anchors"><span>Strongly Disagree</span><span>Strongly Agree</span></div>
+      <button type="button" class="add-comment-btn" data-target="comment_q2">+ Add comment</button>
+      <div class="comment-area" id="comment_q2"><textarea name="q2_comment" placeholder="Optional — tell us more..."></textarea></div>
+    </div>
+    <div class="form-group">
+      <label>3. The pacing felt right — the story never dragged or rushed.</label>
+      <div class="likert-row">
+        <label><input type="radio" name="q3_pacing" value="1" required><span class="label-number">1</span></label>
+        <label><input type="radio" name="q3_pacing" value="2"><span class="label-number">2</span></label>
+        <label><input type="radio" name="q3_pacing" value="3"><span class="label-number">3</span></label>
+        <label><input type="radio" name="q3_pacing" value="4"><span class="label-number">4</span></label>
+        <label><input type="radio" name="q3_pacing" value="5"><span class="label-number">5</span></label>
+      </div>
+      <div class="likert-anchors"><span>Strongly Disagree</span><span>Strongly Agree</span></div>
+      <button type="button" class="add-comment-btn" data-target="comment_q3">+ Add comment</button>
+      <div class="comment-area" id="comment_q3"><textarea name="q3_comment" placeholder="Optional — tell us more..."></textarea></div>
+    </div>
+  </div>
+
+  <!-- SECTION: Characters -->
+  <div class="section-card">
+    <h2>Characters</h2>
+    <div class="form-group">
+      <label>4. The characters felt real and believable — not like cardboard cutouts.</label>
+      <div class="likert-row">
+        <label><input type="radio" name="q4_characters_real" value="1" required><span class="label-number">1</span></label>
+        <label><input type="radio" name="q4_characters_real" value="2"><span class="label-number">2</span></label>
+        <label><input type="radio" name="q4_characters_real" value="3"><span class="label-number">3</span></label>
+        <label><input type="radio" name="q4_characters_real" value="4"><span class="label-number">4</span></label>
+        <label><input type="radio" name="q4_characters_real" value="5"><span class="label-number">5</span></label>
+      </div>
+      <div class="likert-anchors"><span>Strongly Disagree</span><span>Strongly Agree</span></div>
+      <button type="button" class="add-comment-btn" data-target="comment_q4">+ Add comment</button>
+      <div class="comment-area" id="comment_q4"><textarea name="q4_comment" placeholder="Optional — tell us more..."></textarea></div>
+    </div>
+    <div class="form-group">
+      <label>5. I felt emotionally invested in what happened to the characters.</label>
+      <div class="likert-row">
+        <label><input type="radio" name="q5_emotional_investment" value="1" required><span class="label-number">1</span></label>
+        <label><input type="radio" name="q5_emotional_investment" value="2"><span class="label-number">2</span></label>
+        <label><input type="radio" name="q5_emotional_investment" value="3"><span class="label-number">3</span></label>
+        <label><input type="radio" name="q5_emotional_investment" value="4"><span class="label-number">4</span></label>
+        <label><input type="radio" name="q5_emotional_investment" value="5"><span class="label-number">5</span></label>
+      </div>
+      <div class="likert-anchors"><span>Strongly Disagree</span><span>Strongly Agree</span></div>
+      <button type="button" class="add-comment-btn" data-target="comment_q5">+ Add comment</button>
+      <div class="comment-area" id="comment_q5"><textarea name="q5_comment" placeholder="Optional — tell us more..."></textarea></div>
+    </div>
+  </div>
+
+  <!-- SECTION: Dialogue & Setting -->
+  <div class="section-card">
+    <h2>Dialogue &amp; Setting</h2>
+    <div class="form-group">
+      <label>6. The dialogue felt natural — characters sounded like real people talking.</label>
+      <div class="likert-row">
+        <label><input type="radio" name="q6_dialogue" value="1" required><span class="label-number">1</span></label>
+        <label><input type="radio" name="q6_dialogue" value="2"><span class="label-number">2</span></label>
+        <label><input type="radio" name="q6_dialogue" value="3"><span class="label-number">3</span></label>
+        <label><input type="radio" name="q6_dialogue" value="4"><span class="label-number">4</span></label>
+        <label><input type="radio" name="q6_dialogue" value="5"><span class="label-number">5</span></label>
+      </div>
+      <div class="likert-anchors"><span>Strongly Disagree</span><span>Strongly Agree</span></div>
+      <button type="button" class="add-comment-btn" data-target="comment_q6">+ Add comment</button>
+      <div class="comment-area" id="comment_q6"><textarea name="q6_comment" placeholder="Optional — tell us more..."></textarea></div>
+    </div>
+    <div class="form-group">
+      <label>7. The settings and scenes were vivid — I could picture where the story was happening.</label>
+      <div class="likert-row">
+        <label><input type="radio" name="q7_setting" value="1" required><span class="label-number">1</span></label>
+        <label><input type="radio" name="q7_setting" value="2"><span class="label-number">2</span></label>
+        <label><input type="radio" name="q7_setting" value="3"><span class="label-number">3</span></label>
+        <label><input type="radio" name="q7_setting" value="4"><span class="label-number">4</span></label>
+        <label><input type="radio" name="q7_setting" value="5"><span class="label-number">5</span></label>
+      </div>
+      <div class="likert-anchors"><span>Strongly Disagree</span><span>Strongly Agree</span></div>
+      <button type="button" class="add-comment-btn" data-target="comment_q7">+ Add comment</button>
+      <div class="comment-area" id="comment_q7"><textarea name="q7_comment" placeholder="Optional — tell us more..."></textarea></div>
+    </div>
+  </div>
+
+  <!-- SECTION: Emotional Impact & Ending -->
+  <div class="section-card">
+    <h2>Emotional Impact &amp; Ending</h2>
+    <div class="form-group">
+      <label>8. The ending was satisfying and felt earned — not rushed or forced.</label>
+      <div class="likert-row">
+        <label><input type="radio" name="q8_ending" value="1" required><span class="label-number">1</span></label>
+        <label><input type="radio" name="q8_ending" value="2"><span class="label-number">2</span></label>
+        <label><input type="radio" name="q8_ending" value="3"><span class="label-number">3</span></label>
+        <label><input type="radio" name="q8_ending" value="4"><span class="label-number">4</span></label>
+        <label><input type="radio" name="q8_ending" value="5"><span class="label-number">5</span></label>
+      </div>
+      <div class="likert-anchors"><span>Strongly Disagree</span><span>Strongly Agree</span></div>
+      <button type="button" class="add-comment-btn" data-target="comment_q8">+ Add comment</button>
+      <div class="comment-area" id="comment_q8"><textarea name="q8_comment" placeholder="Optional — tell us more..."></textarea></div>
+    </div>
+  </div>
+
+  <!-- SECTION: Overall -->
+  <div class="section-card">
+    <h2>Overall</h2>
+    <div class="form-group">
+      <label>9. Overall, how would you rate this book?</label>
+      <div class="likert-row">
+        <label><input type="radio" name="q9_overall_rating" value="1" required><span class="label-number">1</span><span class="label-text">Poor</span></label>
+        <label><input type="radio" name="q9_overall_rating" value="2"><span class="label-number">2</span><span class="label-text">Below Average</span></label>
+        <label><input type="radio" name="q9_overall_rating" value="3"><span class="label-number">3</span><span class="label-text">Average</span></label>
+        <label><input type="radio" name="q9_overall_rating" value="4"><span class="label-number">4</span><span class="label-text">Good</span></label>
+        <label><input type="radio" name="q9_overall_rating" value="5"><span class="label-number">5</span><span class="label-text">Excellent</span></label>
+      </div>
+      <button type="button" class="add-comment-btn" data-target="comment_q9">+ Add comment</button>
+      <div class="comment-area" id="comment_q9"><textarea name="q9_comment" placeholder="Optional — tell us more..."></textarea></div>
+    </div>
+    <div class="form-group">
+      <label>10. How likely are you to recommend this book to a friend?</label>
+      <div class="likert-row">
+        <label><input type="radio" name="q10_recommend" value="1" required><span class="label-number">1</span><span class="label-text">Very Unlikely</span></label>
+        <label><input type="radio" name="q10_recommend" value="2"><span class="label-number">2</span><span class="label-text">Unlikely</span></label>
+        <label><input type="radio" name="q10_recommend" value="3"><span class="label-number">3</span><span class="label-text">Maybe</span></label>
+        <label><input type="radio" name="q10_recommend" value="4"><span class="label-number">4</span><span class="label-text">Likely</span></label>
+        <label><input type="radio" name="q10_recommend" value="5"><span class="label-number">5</span><span class="label-text">Definitely</span></label>
+      </div>
+      <button type="button" class="add-comment-btn" data-target="comment_q10">+ Add comment</button>
+      <div class="comment-area" id="comment_q10"><textarea name="q10_comment" placeholder="Optional — tell us more..."></textarea></div>
+    </div>
+  </div>
+
+  <!-- SECTION: Your Thoughts -->
+  <div class="section-card">
+    <h2>Your Thoughts</h2>
+    <p>These are optional but incredibly valuable. Share as much or as little as you like.</p>
+    <div class="form-group">
+      <label>11. Were there any moments where you felt confused, bored, or pulled out of the story? If so, where and why?</label>
+      <div class="hint">Chapter numbers or character names help us find the spot.</div>
+      <textarea name="q11_confusion_points" rows="4" placeholder="E.g. 'In Chapter 5 when Caroline found the phone, I wasn't sure why she didn't confront him right away...'"></textarea>
+    </div>
+    <div class="form-group">
+      <label>12. What is the single biggest thing you would improve about this book?</label>
+      <div class="hint">Be honest — this is the most useful answer on the form.</div>
+      <textarea name="q12_biggest_improvement" rows="4" placeholder="Whatever comes to mind first is usually right..."></textarea>
+    </div>
+  </div>
+
+  <div class="submit-section">
+    <button type="submit" class="submit-btn" id="submit-btn">Submit Feedback</button>
+    <p class="submit-help">Your feedback goes directly to the editorial team. Thank you!</p>
+  </div>
+  </form>
+
+  <div id="success-message" class="success-message">
+    <h2>Thank You!</h2>
+    <p>Your feedback has been received. We'll use it to make the final version even better. We really appreciate you taking the time!</p>
+  </div>
+
+  <footer class="page-footer">
+    <div style="font-weight: 600; margin-bottom: 4px;">Book Production Service</div>
+    <div>Questions? Email hello@crimsonpulpfic.com</div>
+  </footer>
+</div>
+
+<script>
+// Submit handler
+document.getElementById("page-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  var btn = document.getElementById("submit-btn");
+  var successMsg = document.getElementById("success-message");
+  btn.disabled = true;
+  btn.textContent = "Submitting...";
+  var formData = new FormData(this);
+  var data = {};
+  formData.forEach(function(value, key) {
+    if (data[key]) {
+      if (!Array.isArray(data[key])) data[key] = [data[key]];
+      data[key].push(value);
+    } else {
+      data[key] = value;
+    }
+  });
+  fetch("https://script.google.com/macros/s/AKfycbz9GI9JB3BHRV99c-JJ9spAcEUgMSKm8gj4UYC3jJm71K2K6tuXPUyTPXdX6PxOt0FHYg/exec", {
+    method: "POST",
+    headers: { "Content-Type": "text/plain" },
+    body: JSON.stringify({ action: "formSubmission", formType: "beta_feedback", token: "e39f1b1f-ff5e-48da-9b85-ba371f37da7d", data: data }),
+    mode: "no-cors"
+  }).then(function() {
+    btn.textContent = "Submitted \u2713";
+    btn.style.background = "#4caf50";
+    if (successMsg) successMsg.style.display = "block";
+    document.getElementById("page-form").style.display = "none";
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }).catch(function(err) {
+    btn.textContent = "Error \u2014 Try Again";
+    btn.style.background = "#ef5350";
+    btn.disabled = false;
+  });
+});
+
+// Toggle comment areas
+document.querySelectorAll('.add-comment-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var target = document.getElementById(btn.getAttribute('data-target'));
+    if (target.style.display === 'block') {
+      target.style.display = 'none';
+      btn.textContent = '+ Add comment';
+    } else {
+      target.style.display = 'block';
+      btn.textContent = '- Hide comment';
+      target.querySelector('textarea').focus();
+    }
+  });
+});
+</script>
+</body>
+</html>
