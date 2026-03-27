@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Your Story — Miss</title>
+<style>
+:root {
+  --brand-dark: #1a1a2e; --brand-accent: #7c5cbf; --brand-gold: #c9a959;
+  --text-primary: #e0e0e0; --text-secondary: #999;
+  --bg-page: #121218; --bg-card: #1e1e2a; --bg-selected: #2a2a3e;
+  --border-card: #333; --green: #4caf50; --red: #ef5350;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg-page); color: var(--text-primary); line-height: 1.6; }
+.container { max-width: 720px; margin: 0 auto; padding: 24px 16px; }
+.page-header { text-align: center; margin-bottom: 32px; padding-bottom: 20px; border-bottom: 2px solid var(--brand-accent); }
+.brand { font-size: 13px; letter-spacing: 3px; color: var(--brand-gold); font-weight: 700; margin-bottom: 8px; text-transform: uppercase; }
+.page-header h1 { font-size: 24px; margin-bottom: 4px; }
+.meta-line { font-size: 14px; color: var(--text-secondary); }
+.section-card { background: var(--bg-card); border-radius: 8px; padding: 24px; margin-bottom: 20px; border: 1px solid var(--border-card); }
+.section-card h2 { font-size: 18px; color: var(--brand-gold); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border-card); }
+.form-group { margin-bottom: 20px; }
+.form-group > label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+.form-group .hint { font-size: 13px; color: var(--text-secondary); margin-bottom: 6px; font-style: italic; }
+.form-group .quote { border-left: 3px solid var(--brand-accent); padding: 8px 16px; margin: 8px 0; color: var(--text-secondary); font-style: italic; font-size: 13px; }
+.form-group .pick-note { font-size: 12px; color: var(--brand-accent); margin-bottom: 6px; }
+.option-group { display: flex; flex-direction: column; gap: 8px; }
+.option-group label { display: flex; align-items: flex-start; gap: 10px; font-weight: 400; cursor: pointer; padding: 10px 12px; border-radius: 6px; border: 1px solid transparent; transition: background 0.15s, border-color 0.15s; }
+.option-group label:hover { background: var(--bg-selected); border-color: var(--border-card); }
+.option-group input[type="radio"], .option-group input[type="checkbox"] { width: 18px; height: 18px; margin-top: 2px; accent-color: var(--brand-accent); flex-shrink: 0; }
+.other-text { width: 100%; padding: 10px 12px; background: #16161f; border: 1px solid var(--border-card); border-radius: 6px; color: var(--text-primary); font-size: 15px; font-family: inherit; margin-top: 8px; display: none; resize: vertical; }
+.other-text:focus { border-color: var(--brand-accent); outline: none; box-shadow: 0 0 0 3px rgba(124,92,191,0.2); }
+/* Binary pairs */
+.pair-row { display: flex; gap: 8px; margin-bottom: 8px; }
+.pair-row label { flex: 1; text-align: center; padding: 12px 8px; border: 1px solid var(--border-card); border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 400; transition: background 0.15s, border-color 0.15s; display: flex; align-items: center; justify-content: center; gap: 6px; }
+.pair-row label:hover { background: var(--bg-selected); }
+.pair-row input[type="radio"] { width: 16px; height: 16px; accent-color: var(--brand-accent); }
+@media (max-width: 480px) { .pair-row { flex-direction: column; } .pair-row label { text-align: left; justify-content: flex-start; } }
+.submit-section { text-align: center; padding: 24px; background: var(--bg-card); border-radius: 8px; border: 1px solid var(--border-card); margin-top: 24px; }
+.submit-btn { background: var(--brand-accent); color: white; border: none; padding: 14px 36px; font-size: 16px; font-weight: 700; border-radius: 8px; cursor: pointer; }
+.submit-btn:hover:not(:disabled) { background: #6a4daa; }
+.submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.submit-help { font-size: 13px; color: var(--text-secondary); margin-top: 10px; }
+.success-message { background: #1a2a1a; color: var(--green); padding: 24px; border-radius: 8px; text-align: center; margin-top: 24px; display: none; }
+.success-message h2 { margin-bottom: 8px; border: none; padding: 0; color: var(--green); }
+.page-footer { text-align: center; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border-card); font-size: 13px; color: var(--text-secondary); }
+@media (max-width: 480px) { .container { padding: 12px 8px; } .submit-btn { width: 100%; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="page-header">
+    <div class="brand">BOOK PRODUCTION SERVICE</div>
+    <h1>Shaping Your Story</h1>
+    <div class="meta-line">Generated: March 27, 2026</div>
+  </header>
+
+  <form id="page-form">
+    <input type="hidden" name="token" value="813056ca-4b4e-4d14-83a9-28549ac54b08">
+    <input type="hidden" name="form_type" value="beta_vision">
+    <input type="hidden" name="client_name" value="Offside Hearts">
+    <input type="hidden" name="_subgenre" value="general">
+  <div class="section-card">
+    <h2>Welcome Back, Miss</h2>
+    <p>You told us you're writing a <strong>Contemporary (modern day, real world)</strong>, that feels like <strong>The Notebook — sweeping love story across decades, It Ends with Us — love, heartbreak, tough choices</strong>, with a <strong>Funny and heartwarming, Steamy and romantic, Angsty and intense</strong> vibe. Your characters are <strong>White / European</strong>.</p>
+    <p>We've turned your answers into suggestions. For each question, just pick the option that feels right — or choose <strong>Other</strong> if none of them fit.</p>
+    <p>This should take about <strong>5 minutes</strong>. No essays required.</p>
+  </div>    <div class="section-card">      <h2>The Basics</h2><div class="form-group">
+  <label>1. Working title (if you have one)</label>
+  <div class="hint">No pressure — we can figure this out later.</div>
+  <input type="text" name="working_title" style="width:100%;padding:10px 12px;background:#16161f;border:1px solid var(--border-card);border-radius:6px;color:var(--text-primary);font-size:15px;font-family:inherit;" placeholder="Type here...">
+</div><div class="form-group">
+  <label>2. Describe your protagonist in a sentence or two</label>
+  <div class="hint">You said your characters are White / European. Tell us about your protagonist — name, age, situation. What cultural details matter? (family structure, community, traditions, names, food, faith)</div>
+  <textarea name="protagonist_description" rows="2" style="width:100%;padding:10px 12px;background:#16161f;border:1px solid var(--border-card);border-radius:6px;color:var(--text-primary);font-size:15px;font-family:inherit;resize:vertical;"></textarea>
+</div>    </div>    <div class="section-card">      <h2>Your World</h2><div class="form-group">
+  <label>3. Where does the story take place?</label>
+  <div class="option-group">
+    <label><input type="radio" name="setting_place" value="Big city"> Big city</label>
+    <label><input type="radio" name="setting_place" value="Small town"> Small town</label>
+    <label><input type="radio" name="setting_place" value="Fantasy world"> Fantasy world</label>
+    <label><input type="radio" name="setting_place" value="Historical setting"> Historical setting</label>
+    <label><input type="radio" name="setting_place" value="Futuristic setting"> Futuristic setting</label>
+    <label><input type="radio" name="setting_place" value="Somewhere unconventional"> Somewhere unconventional</label>
+    <label><input type="radio" name="setting_place" value="__other__" data-other="other_setting_place"> Other</label>
+    <textarea class="other-text" id="other_setting_place" name="setting_place_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>4. When?</label>
+  <div class="option-group">
+    <label><input type="radio" name="setting_era" value="Present day"> Present day</label>
+    <label><input type="radio" name="setting_era" value="Historical"> Historical</label>
+    <label><input type="radio" name="setting_era" value="Near future"> Near future</label>
+    <label><input type="radio" name="setting_era" value="Far future"> Far future</label>
+    <label><input type="radio" name="setting_era" value="Ambiguous / timeless"> Ambiguous / timeless</label>
+    <label><input type="radio" name="setting_era" value="__other__" data-other="other_setting_era"> Other</label>
+    <textarea class="other-text" id="other_setting_era" name="setting_era_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>5. Describe the setting in a sentence or two</label>
+  <textarea name="setting_detail" rows="2" style="width:100%;padding:10px 12px;background:#16161f;border:1px solid var(--border-card);border-radius:6px;color:var(--text-primary);font-size:15px;font-family:inherit;resize:vertical;"></textarea>
+</div>    </div>    <div class="section-card">      <h2>Your Protagonist</h2><div class="form-group">
+  <label>6. What does your protagonist want more than anything?</label>
+  <div class="option-group">
+    <label><input type="radio" name="protagonist_want" value="To survive"> To survive</label>
+    <label><input type="radio" name="protagonist_want" value="To find where they belong"> To find where they belong</label>
+    <label><input type="radio" name="protagonist_want" value="Justice or revenge"> Justice or revenge</label>
+    <label><input type="radio" name="protagonist_want" value="Love or connection"> Love or connection</label>
+    <label><input type="radio" name="protagonist_want" value="Freedom"> Freedom</label>
+    <label><input type="radio" name="protagonist_want" value="To prove themselves"> To prove themselves</label>
+    <label><input type="radio" name="protagonist_want" value="__other__" data-other="other_protagonist_want"> Other</label>
+    <textarea class="other-text" id="other_protagonist_want" name="protagonist_want_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>7. What makes the protagonist stand out?</label>
+  <div class="option-group">
+    <label><input type="radio" name="protagonist_special" value="Their voice"> Their voice</label>
+    <label><input type="radio" name="protagonist_special" value="Their flaws"> Their flaws</label>
+    <label><input type="radio" name="protagonist_special" value="Their resilience"> Their resilience</label>
+    <label><input type="radio" name="protagonist_special" value="Their humor"> Their humor</label>
+    <label><input type="radio" name="protagonist_special" value="Their ambition"> Their ambition</label>
+    <label><input type="radio" name="protagonist_special" value="Their ordinariness"> Their ordinariness</label>
+    <label><input type="radio" name="protagonist_special" value="__other__" data-other="other_protagonist_special"> Other</label>
+    <textarea class="other-text" id="other_protagonist_special" name="protagonist_special_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div>    </div>    <div class="section-card">      <h2>Your Plot</h2><div class="form-group">
+  <label>8. What&#x27;s the main obstacle or threat?</label>
+  <div class="option-group">
+    <label><input type="radio" name="antagonist_type" value="A specific villain"> A specific villain</label>
+    <label><input type="radio" name="antagonist_type" value="Society or the system"> Society or the system</label>
+    <label><input type="radio" name="antagonist_type" value="Their own nature"> Their own nature</label>
+    <label><input type="radio" name="antagonist_type" value="Nature or environment"> Nature or environment</label>
+    <label><input type="radio" name="antagonist_type" value="Time running out"> Time running out</label>
+    <label><input type="radio" name="antagonist_type" value="A rival"> A rival</label>
+    <label><input type="radio" name="antagonist_type" value="__other__" data-other="other_antagonist_type"> Other</label>
+    <textarea class="other-text" id="other_antagonist_type" name="antagonist_type_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>9. Describe ONE scene you can already picture — the movie moment in your head</label>
+  <textarea name="visual_scene" rows="3" style="width:100%;padding:10px 12px;background:#16161f;border:1px solid var(--border-card);border-radius:6px;color:var(--text-primary);font-size:15px;font-family:inherit;resize:vertical;"></textarea>
+</div>    </div>    <div class="section-card">      <h2>The Romance</h2><div class="form-group">
+  <label>10. Is there romance?</label>
+  <div class="option-group">
+    <label><input type="radio" name="romance_presence" value="None"> None</label>
+    <label><input type="radio" name="romance_presence" value="Subplot"> Subplot</label>
+    <label><input type="radio" name="romance_presence" value="Important but secondary"> Important but secondary</label>
+    <label><input type="radio" name="romance_presence" value="Central to the story"> Central to the story</label>
+    <label><input type="radio" name="romance_presence" value="__other__" data-other="other_romance_presence"> Other</label>
+    <textarea class="other-text" id="other_romance_presence" name="romance_presence_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div>    </div>    <div class="section-card">      <h2>This or That</h2><div class="form-group">
+  <label>11. Quick picks — choose one from each pair</label>
+  <div class="hint">These help us nail the feel of your book. Go with your gut.</div>
+  <div class="pair-row">
+    <label><input type="radio" name="pair_0" value="Plot-driven (things happen fast)"> Plot-driven (things happen fast)</label>
+    <label><input type="radio" name="pair_0" value="Character-driven (deep inner world)"> Character-driven (deep inner world)</label>
+  </div>
+  <div class="pair-row">
+    <label><input type="radio" name="pair_1" value="Fast pace"> Fast pace</label>
+    <label><input type="radio" name="pair_1" value="Slow burn"> Slow burn</label>
+  </div>
+  <div class="pair-row">
+    <label><input type="radio" name="pair_2" value="Happy ending"> Happy ending</label>
+    <label><input type="radio" name="pair_2" value="Bittersweet ending"> Bittersweet ending</label>
+  </div>
+  <div class="pair-row">
+    <label><input type="radio" name="pair_3" value="Surprise the reader"> Surprise the reader</label>
+    <label><input type="radio" name="pair_3" value="Satisfy expectations"> Satisfy expectations</label>
+  </div>
+  <div class="pair-row">
+    <label><input type="radio" name="pair_4" value="Dialogue-heavy"> Dialogue-heavy</label>
+    <label><input type="radio" name="pair_4" value="Rich description / inner monologue"> Rich description / inner monologue</label>
+  </div>
+  <div class="pair-row">
+    <label><input type="radio" name="pair_5" value="Gritty and raw"> Gritty and raw</label>
+    <label><input type="radio" name="pair_5" value="Polished and elegant"> Polished and elegant</label>
+  </div>
+  <div class="pair-row">
+    <label><input type="radio" name="pair_6" value="One protagonist&#x27;s POV"> One protagonist&#x27;s POV</label>
+    <label><input type="radio" name="pair_6" value="Multiple viewpoints"> Multiple viewpoints</label>
+  </div>
+  <div class="pair-row">
+    <label><input type="radio" name="pair_7" value="Serious tone"> Serious tone</label>
+    <label><input type="radio" name="pair_7" value="Playful tone"> Playful tone</label>
+  </div>
+</div>    </div>    <div class="section-card">      <h2>Tone &amp; Feel</h2><div class="form-group">
+  <label>12. How steamy?</label>
+  <div class="option-group">
+    <label><input type="radio" name="heat_level" value="Closed door"> Closed door</label>
+    <label><input type="radio" name="heat_level" value="Steamy but not explicit"> Steamy but not explicit</label>
+    <label><input type="radio" name="heat_level" value="Spicy with detailed scenes"> Spicy with detailed scenes</label>
+    <label><input type="radio" name="heat_level" value="Very explicit"> Very explicit</label>
+    <label><input type="radio" name="heat_level" value="__other__" data-other="other_heat_level"> Other</label>
+    <textarea class="other-text" id="other_heat_level" name="heat_level_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>13. What kind of humor?</label>
+  <div class="option-group">
+    <label><input type="radio" name="humor_style" value="Witty banter"> Witty banter</label>
+    <label><input type="radio" name="humor_style" value="Fish-out-of-water"> Fish-out-of-water</label>
+    <label><input type="radio" name="humor_style" value="Comic relief character"> Comic relief character</label>
+    <label><input type="radio" name="humor_style" value="Dry narration"> Dry narration</label>
+    <label><input type="radio" name="humor_style" value="Sarcastic protagonist"> Sarcastic protagonist</label>
+    <label><input type="radio" name="humor_style" value="Not much humor"> Not much humor</label>
+    <label><input type="radio" name="humor_style" value="__other__" data-other="other_humor_style"> Other</label>
+    <textarea class="other-text" id="other_humor_style" name="humor_style_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>14. When the reader closes the book, what&#x27;s the ONE feeling that stays?</label>
+  <div class="option-group">
+    <label><input type="radio" name="closing_feeling" value="Hope — things are going to be OK"> Hope — things are going to be OK</label>
+    <label><input type="radio" name="closing_feeling" value="Wonder — that world felt real and I want to go back"> Wonder — that world felt real and I want to go back</label>
+    <label><input type="radio" name="closing_feeling" value="Satisfaction — the journey was worth it"> Satisfaction — the journey was worth it</label>
+    <label><input type="radio" name="closing_feeling" value="Warmth — I care about these characters like friends"> Warmth — I care about these characters like friends</label>
+    <label><input type="radio" name="closing_feeling" value="Curiosity — I need to know what happens next"> Curiosity — I need to know what happens next</label>
+    <label><input type="radio" name="closing_feeling" value="Triumph — she did it against all odds"> Triumph — she did it against all odds</label>
+    <label><input type="radio" name="closing_feeling" value="__other__" data-other="other_closing_feeling"> Other</label>
+    <textarea class="other-text" id="other_closing_feeling" name="closing_feeling_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div>    </div>    <div class="section-card">      <h2>What Worries You</h2><div class="form-group">
+  <label>15. What worries you most about this story?</label>
+  <div class="hint">This tells us where to put extra care.</div>
+  <div class="option-group">
+    <label><input type="radio" name="biggest_worry" value="That it&#x27;ll feel too generic / like everything else in the genre"> That it&#x27;ll feel too generic / like everything else in the genre</label>
+    <label><input type="radio" name="biggest_worry" value="That the protagonist won&#x27;t feel unique enough"> That the protagonist won&#x27;t feel unique enough</label>
+    <label><input type="radio" name="biggest_worry" value="That the world won&#x27;t feel real or detailed enough"> That the world won&#x27;t feel real or detailed enough</label>
+    <label><input type="radio" name="biggest_worry" value="That the pacing will be off"> That the pacing will be off</label>
+    <label><input type="radio" name="biggest_worry" value="That it&#x27;ll be too predictable"> That it&#x27;ll be too predictable</label>
+    <label><input type="radio" name="biggest_worry" value="That my vision won&#x27;t come through"> That my vision won&#x27;t come through</label>
+    <label><input type="radio" name="biggest_worry" value="__other__" data-other="other_biggest_worry"> Other</label>
+    <textarea class="other-text" id="other_biggest_worry" name="biggest_worry_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div>    </div>    <div class="section-card">      <h2>Guardrails</h2><div class="form-group">
+  <label>16. How much violence is OK?</label>
+  <div class="hint">You said</div>
+  <div class="quote">Weak characters</div>
+  <div class="option-group">
+    <label><input type="radio" name="violence_level" value="Cartoon/implied — no real consequences shown"> Cartoon/implied — no real consequences shown</label>
+    <label><input type="radio" name="violence_level" value="Real danger but not graphic"> Real danger but not graphic</label>
+    <label><input type="radio" name="violence_level" value="Battle scenes OK with some intensity"> Battle scenes OK with some intensity</label>
+    <label><input type="radio" name="violence_level" value="Graphic when it serves the story"> Graphic when it serves the story</label>
+    <label><input type="radio" name="violence_level" value="Keep it very light"> Keep it very light</label>
+    <label><input type="radio" name="violence_level" value="__other__" data-other="other_violence_level"> Other</label>
+    <textarea class="other-text" id="other_violence_level" name="violence_level_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>17. How dark can the story get?</label>
+  <div class="option-group">
+    <label><input type="radio" name="darkest_moment" value="Scary moments but always hopeful — the light wins"> Scary moments but always hopeful — the light wins</label>
+    <label><input type="radio" name="darkest_moment" value="Real danger and emotional pain, but ultimately uplifting"> Real danger and emotional pain, but ultimately uplifting</label>
+    <label><input type="radio" name="darkest_moment" value="Keep it light throughout"> Keep it light throughout</label>
+    <label><input type="radio" name="darkest_moment" value="She can struggle and fail, as long as she grows from it"> She can struggle and fail, as long as she grows from it</label>
+    <label><input type="radio" name="darkest_moment" value="As dark as it needs to be"> As dark as it needs to be</label>
+    <label><input type="radio" name="darkest_moment" value="__other__" data-other="other_darkest_moment"> Other</label>
+    <textarea class="other-text" id="other_darkest_moment" name="darkest_moment_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>18. Can characters die?</label>
+  <div class="option-group">
+    <label><input type="radio" name="death_policy" value="Only villains"> Only villains</label>
+    <label><input type="radio" name="death_policy" value="Supporting characters can die if it serves the story"> Supporting characters can die if it serves the story</label>
+    <label><input type="radio" name="death_policy" value="Main characters are safe"> Main characters are safe</label>
+    <label><input type="radio" name="death_policy" value="Anyone can die — make it feel real"> Anyone can die — make it feel real</label>
+    <label><input type="radio" name="death_policy" value="__other__" data-other="other_death_policy"> Other</label>
+    <textarea class="other-text" id="other_death_policy" name="death_policy_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>19. What should this book definitely NOT be? Check all that apply.</label>
+  <div class="option-group">
+    <label><input type="checkbox" name="book_is_not" value="Not grimdark or hopeless"> Not grimdark or hopeless</label>
+    <label><input type="checkbox" name="book_is_not" value="Not childish — she&#x27;s an adult, not a kid"> Not childish — she&#x27;s an adult, not a kid</label>
+    <label><input type="checkbox" name="book_is_not" value="Not preachy or moralistic"> Not preachy or moralistic</label>
+    <label><input type="checkbox" name="book_is_not" value="Not ultra-violent or gory"> Not ultra-violent or gory</label>
+    <label><input type="checkbox" name="book_is_not" value="Not slow — things need to happen"> Not slow — things need to happen</label>
+    <label><input type="checkbox" name="book_is_not" value="__other__" data-other="other_book_is_not"> Other</label>
+    <textarea class="other-text" id="other_book_is_not" name="book_is_not_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div>    </div>    <div class="section-card">      <h2>Structure</h2><div class="form-group">
+  <label>20. How long should the book be?</label>
+  <div class="option-group">
+    <label><input type="radio" name="book_length" value="Novella (20,000-40,000 words)"> Novella (20,000-40,000 words)</label>
+    <label><input type="radio" name="book_length" value="Short novel (40,000-60,000 words)"> Short novel (40,000-60,000 words)</label>
+    <label><input type="radio" name="book_length" value="Standard novel (60,000-80,000 words)"> Standard novel (60,000-80,000 words)</label>
+    <label><input type="radio" name="book_length" value="Long novel (80,000-100,000 words)"> Long novel (80,000-100,000 words)</label>
+    <label><input type="radio" name="book_length" value="You decide"> You decide</label>
+    <label><input type="radio" name="book_length" value="__other__" data-other="other_book_length"> Other</label>
+    <textarea class="other-text" id="other_book_length" name="book_length_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>21. Standalone or leave room for more?</label>
+  <div class="option-group">
+    <label><input type="radio" name="standalone_or_open" value="Standalone — a complete story in one book"> Standalone — a complete story in one book</label>
+    <label><input type="radio" name="standalone_or_open" value="Leave room for a series — wrap up the main story but leave the door open"> Leave room for a series — wrap up the main story but leave the door open</label>
+    <label><input type="radio" name="standalone_or_open" value="__other__" data-other="other_standalone_or_open"> Other</label>
+    <textarea class="other-text" id="other_standalone_or_open" name="standalone_or_open_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div>    </div>    <div class="section-card">      <h2>The Details</h2><div class="form-group">
+  <label>22. Supporting cast?</label>
+  <div class="option-group">
+    <label><input type="radio" name="supporting_cast" value="Ensemble"> Ensemble</label>
+    <label><input type="radio" name="supporting_cast" value="One key companion"> One key companion</label>
+    <label><input type="radio" name="supporting_cast" value="Family"> Family</label>
+    <label><input type="radio" name="supporting_cast" value="Community"> Community</label>
+    <label><input type="radio" name="supporting_cast" value="Solo"> Solo</label>
+    <label><input type="radio" name="supporting_cast" value="__other__" data-other="other_supporting_cast"> Other</label>
+    <textarea class="other-text" id="other_supporting_cast" name="supporting_cast_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div><div class="form-group">
+  <label>23. You mentioned you have materials. What should we pay MOST attention to?</label>
+  <div class="option-group">
+    <label><input type="radio" name="materials_priority" value="The characters"> The characters</label>
+    <label><input type="radio" name="materials_priority" value="The plot"> The plot</label>
+    <label><input type="radio" name="materials_priority" value="The world"> The world</label>
+    <label><input type="radio" name="materials_priority" value="The tone and voice"> The tone and voice</label>
+    <label><input type="radio" name="materials_priority" value="Use everything equally"> Use everything equally</label>
+    <label><input type="radio" name="materials_priority" value="I&#x27;ll explain in the materials"> I&#x27;ll explain in the materials</label>
+    <label><input type="radio" name="materials_priority" value="__other__" data-other="other_materials_priority"> Other</label>
+    <textarea class="other-text" id="other_materials_priority" name="materials_priority_other" rows="2" placeholder="Tell us in your own words..."></textarea>
+  </div>
+</div>    </div>    <div class="section-card">
+      <h2>Anything Else</h2>
+      <div class="form-group">
+        <label>24. Anything we missed?</label>
+        <div class="hint">Totally optional. If something's burning in your mind, put it here.</div>
+        <textarea name="anything_else" rows="4" style="width:100%;padding:12px 14px;border:1px solid var(--border-card);border-radius:6px;font-size:15px;font-family:inherit;color:var(--text-primary);background:#16161f;resize:vertical;min-height:100px;"></textarea>
+      </div>
+    </div>    <div class="submit-section">
+      <button type="submit" class="submit-btn" id="submit-btn">Submit</button>
+      <p class="submit-help">Once we have this, we start building your book.</p>
+    </div>
+  </form>
+
+  <div id="success-message" class="success-message">
+    <h2>Submitted Successfully</h2>
+    <p>We have everything we need. We'll get to work and keep you posted!</p>
+  </div>
+  <footer class="page-footer">
+    <div style="font-weight: 600; margin-bottom: 4px;">Book Production Service</div>
+    <div>Questions? Email hello@crimsonpulpfic.com</div>
+  </footer>
+</div>
+
+<script>
+document.getElementById("page-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  var btn = document.getElementById("submit-btn");
+  var successMsg = document.getElementById("success-message");
+  btn.disabled = true;
+  btn.textContent = "Submitting...";
+  var formData = new FormData(this);
+  var data = {};
+  formData.forEach(function(value, key) {
+    if (data[key]) {
+      if (!Array.isArray(data[key])) data[key] = [data[key]];
+      data[key].push(value);
+    } else {
+      data[key] = value;
+    }
+  });
+  fetch("https://script.google.com/macros/s/AKfycbz9GI9JB3BHRV99c-JJ9spAcEUgMSKm8gj4UYC3jJm71K2K6tuXPUyTPXdX6PxOt0FHYg/exec", {
+    method: "POST",
+    headers: { "Content-Type": "text/plain" },
+    body: JSON.stringify({ action: "formSubmission", formType: "beta_vision", token: "813056ca-4b4e-4d14-83a9-28549ac54b08", data: data }),
+    mode: "no-cors"
+  }).then(function() {
+    btn.textContent = "Submitted \u2713";
+    btn.style.background = "#4caf50";
+    if (successMsg) successMsg.style.display = "block";
+    document.getElementById("page-form").style.display = "none";
+  }).catch(function(err) {
+    btn.textContent = "Error \u2014 Try Again";
+    btn.style.background = "#ef5350";
+    btn.disabled = false;
+  });
+});
+// Toggle "Other" text areas
+document.querySelectorAll('input[data-other]').forEach(function(input) {
+  var textId = input.getAttribute('data-other');
+  var textarea = document.getElementById(textId);
+  var name = input.name;
+  document.querySelectorAll('input[name="' + name + '"]').forEach(function(r) {
+    r.addEventListener('change', function() {
+      textarea.style.display = input.checked ? 'block' : 'none';
+      if (input.checked) textarea.focus();
+    });
+  });
+});
+// Enforce pick limits
+document.querySelectorAll('.pick-note').forEach(function(note) {
+  var group = note.closest('.form-group');
+  if (!group) return;
+  var limit = parseInt(note.textContent.match(/\d+/)?.[0] || '0');
+  if (!limit) return;
+  var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+  checkboxes.forEach(function(cb) {
+    cb.addEventListener('change', function() {
+      var checked = group.querySelectorAll('input[type="checkbox"]:checked').length;
+      if (checked >= limit) {
+        checkboxes.forEach(function(c) { if (!c.checked) c.disabled = true; });
+      } else {
+        checkboxes.forEach(function(c) { c.disabled = false; });
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
